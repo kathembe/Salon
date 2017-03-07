@@ -1,0 +1,20 @@
+<div class="head">
+  <h2>Current Stylists</h2>
+</div>
+
+<% if @stylists.any?() %>
+  <div class="body">
+    <ul>
+      <% @stylists.each() do |stylist| %>
+        <li>
+          <a href="/stylists/<%= stylist.id()%>"><%= stylist.name() %></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+<% else %>
+  <div class="body">
+   <p>There are no Stylists Yet.</p>
+  </div>
+<% end %>
